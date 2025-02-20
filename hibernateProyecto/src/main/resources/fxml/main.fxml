@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="807.0" xmlns="http://javafx.com/javafx/17.0.8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hibernate.controller.MainController">
+   <children>
+      <VBox spacing="10" layoutX="10.0" layoutY="10.0" prefWidth="780.0" prefHeight="580.0" style="-fx-background-color: #f0f8ff; -fx-padding: 10; -fx-border-color: #b0c4de; -fx-border-width: 2;">
+         <Label text="Proyecto R. Reyes" styleClass="title" />
+         <HBox spacing="10">
+            <VBox spacing="10" prefWidth="300.0" style="-fx-background-color: #e6e6fa; -fx-padding: 10; -fx-border-color: #dcdcdc; -fx-border-width: 2;">
+               <Label text="Dispositivos" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <TableView fx:id="dispositivosTable" prefHeight="200.0" prefWidth="280.0">
+                  <columns>
+                     <TableColumn fx:id="idColumn" text="ID" />
+                     <TableColumn fx:id="nombreColumn" text="Nombre" />
+                  </columns>
+               </TableView>
+            </VBox>
+            <VBox spacing="10" prefWidth="460.0" style="-fx-background-color: #e6e6fa; -fx-padding: 10; -fx-border-color: #dcdcdc; -fx-border-width: 2;">
+               <Label text="Incidencias" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <TableView fx:id="incidenciasTable" prefHeight="200.0" prefWidth="440.0">
+                  <columns>
+                     <TableColumn fx:id="IdDispositivo" text="ID Dispositivo" />
+                     <TableColumn fx:id="Descripción" text="Descripción" />
+                     <TableColumn fx:id="Fecha" text="Fecha" />
+                     <TableColumn fx:id="Tipo" text="Tipo" />
+                  </columns>
+               </TableView>
+            </VBox>
+         </HBox>
+         <HBox spacing="10">
+            <VBox spacing="10" prefWidth="300.0" style="-fx-background-color: #f5f5dc; -fx-padding: 10; -fx-border-color: #dcdcdc; -fx-border-width: 2;">
+               <Label text="Filtros" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <ComboBox fx:id="comboBox" prefHeight="25.0" prefWidth="280.0" />
+               <DatePicker fx:id="datePicker" prefHeight="25.0" prefWidth="280.0" />
+               <CheckBox fx:id="leve" mnemonicParsing="false" text="LEVE" />
+               <CheckBox fx:id="media" mnemonicParsing="false" text="MEDIA" />
+               <CheckBox fx:id="urgente" mnemonicParsing="false" text="URGENTE" />
+               <Button fx:id="borrarFiltros" mnemonicParsing="false" prefHeight="25.0" prefWidth="280.0" text="BORRAR FILTROS" />
+            </VBox>
+            <VBox spacing="10" prefWidth="460.0" style="-fx-background-color: #f5f5dc; -fx-padding: 10; -fx-border-color: #dcdcdc; -fx-border-width: 2;">
+               <Label text="Gráfico de Tarta" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <PieChart fx:id="graficoTarta" prefHeight="200.0" prefWidth="440.0" />
+            </VBox>
+         </HBox>
+      </VBox>
+   </children>
+</Pane>
