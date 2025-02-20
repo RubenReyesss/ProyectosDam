@@ -1,8 +1,0 @@
-com\example\hibernate\model\TipoIncidencia.class
-com\example\hibernate\model\Dispositivo.class
-com\example\hibernate\model\Incidencia.class
-com\example\hibernate\dao\IncidenciaDAO.class
-com\example\hibernate\MainApp.class
-com\example\hibernate\util\HibernateUtil.class
-com\example\hibernate\dao\DispositivoDAO.class
-com\example\hibernate\controller\MainController.class
